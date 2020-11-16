@@ -9,11 +9,19 @@ export default async function isAuthenticated(
 ): Promise<Response | void> {
     const headerAuth = request.headers.authorization;
     if (!headerAuth) {
-        return response.status(401).json({ message: 'Invalid authorization' });
+        return response
+            .status(401)
+            .json({
+                message: 'Authentication Fails',
+                error: 'Invalid Credentials',
+            });
     }
     const [, token] = headerAuth.split(' ');
     const payload = jwt.verify(token);
     const user = await knex('admin').where({ id: payload.user }).first();
-    if (!user) return response.status(401).json({ message: 'Invalid token' });
+    if (!user) return response.status(401).json({
+        message: 'Authentication Fails',
+        error: 'Invalid Credentials',
+    });
     next();
 }
