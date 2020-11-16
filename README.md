@@ -1,20 +1,108 @@
-# User Management
-## Manage Users and Loyalty them.
+<p align="center">
+  <h2 align="center">User Management</h3>
+  <h3 align="center">Manage Users and Loyalty them.</p>
+<p align="center">
 
-- knexfile.ts 
-```ts
- connection: {
-    host: 'localhost',
-    port: 5433,
-    user: 'postgres',
-    password: 'docker',
-    database: 'postgres',
-},
+  
+<!-- TABLE OF CONTENTS -->
+## :paperclip: Sumário
 
+
+* [Start](#getting-started)
+  * [Tecnologies](#used-tecnologies)
+  * [Requisites](#requisites)
+  * [Installation](#installation)
+* [Documentation](#documentation)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+
+<!-- GETTING STARTED -->
+## Getting started
+
+### Used Tecnologies
+:pushpin: Most Used Tecnologies
+* [Typescript](https://www.typescriptlang.org)
+* [Postgres](https://www.postgresql.org)
+* [KnexJS](http://knexjs.org/)
+* [Docker](https://www.docker.com/)
+* [JWT](https://jwt.io/)
+* [NodeJS](https://nodejs.org/en/)
+
+### Requisites
+
+- You need <a href="https://nodejs.org/en/">NodeJS</a>.
+- I used <a href="https://yarnpkg.com">Yarn</a>, you can use npm if you prefer to.
+- I'd recommend you use <a href="https://www.postgresql.org">Postgres</a>.
+
+- Configure knexfile.ts
+
+  ```ts
+   connection: {
+      host: 'localhost',
+      port: 5433,
+      user: 'postgres',
+      password: 'docker',
+      database: 'postgres',
+  },
+
+  ```
+
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/cKauan/user-management.git
+
+# Install all packages
+
+# Yarn
+yarn install
+# Npm
+npm install
+
+
+# Run migrations
+
+# Yarn
+yarn knex migrate:latest
+# Npm
+npx knex migrate:latest
+
+# Run seeds
+
+# Yarn
+yarn knex seed:run
+
+# Npm
+npx knex seed:run
+
+# Development server
+
+# Yarn
+yarn start:dev
+# Npm
+npm run start:dev
+
+# Production Environment
+
+# Yarn
+yarn build
+# Npm
+npm run build
+
+# Start project in production
+
+# Yarn
+yarn start
+# Npm
+npm run start
 ```
 
+## Documentation
 
-## Dashboard Routes
+### Dashboard Routes
 |Method|Path|Description|Body|
 |---|---|---|---|
 |**GET**|```/users```|get the users list ordered by id|No Body|
@@ -22,7 +110,7 @@
 |**PUT**|```/user<id>```|update an user by id|Json|
 |**DELETE**|```/user<id>```|delete an user by id|No Body|
 
- - ### GET
+ - #### GET
     - Header Authorization
       ```Authorization: Bearer <token>```
 
@@ -67,7 +155,7 @@
    
        **See:** <a href="/">Error Docs</a>
 
- - ### POST
+ - #### POST
      |Field|Description|Type|
      |---|---|---|
      |**name**|user name|string|
@@ -108,7 +196,7 @@
          
          **See:** <a href="/">Error Docs</a>
          
-- ### PUT
+- #### PUT
  
     - Header Authorization
       ```Authorization: Bearer <token>```
@@ -142,7 +230,7 @@
        **See:** <a href="/">Error Docs</a>
 
 
- - ### DELETE
+ - #### DELETE
     - Header Authorization
       ```Authorization: Bearer <token>```
 
@@ -159,13 +247,13 @@
        
        **See:** <a href="/">Error Docs</a>
 
-## Admin Routes
+### Admin Routes
 |Method|Path|Description|Body|
 |---|---|---|---|
 |**POST**|```/sign```|register a new admin|Json|
 |**GET**|```/login```|login into admin account|No Body|
 
-  - ### GET
+  - #### GET
      - Header Authorization
      
        ```Authorization: Basic <basic64credentials>```
@@ -188,7 +276,7 @@
         
         **See:** <a href="/">Error Docs</a>
         
-  - ### POST
+  - #### POST
       |Field|Description|type|
       |---|---|---|
       |**name**|admin name|string|
@@ -223,3 +311,27 @@
             }
           ```
           **See:** <a href="/">Error Docs</a>
+          
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+:dart: Do you wanna contribute and don't know why?
+
+1. Fork Project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit (`git commit -m 'Add some AmazingFeature'`)
+4. Push to your branch (`git push origin feature/AmazingFeature`)
+5. Open a pull request
+
+<!-- LICENSE -->
+## License
+
+<a href="https://choosealicense.com/licenses/mit/">MIT</a>
+
+<!-- CONTACT -->
+## Contact
+
+:boy: Carlos Kauãn - [https://twitter.com/carlaodamassaa](https://twitter.com/carlaodamassaa) - carloskauanmoreiradesousa@gmail.com
+
+<p align="center">Feito com 💚 por Carlos Kauãn</p>
