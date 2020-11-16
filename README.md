@@ -22,48 +22,6 @@
 |**PUT**|```/user<id>```|update an user by id|
 |**DELETE**|```/user<id>```|delete an user by id|
 
- - ### POST
-     |Field|Description|Type|
-     |---|---|---|
-     |**name**|user name|string|
-     |**phone**|user phone|string|
-     |**bought**|how much user bought|number|
-     |**notes**|notes about user|string|
-
-     - Header Authorization
-
-       ```Authorization: Bearer <token>```
-
-       **token must be valid. See:**
-       <a href="/">How to get a token</a>
-     - Request Example
-
-        ```json
-          {
-            "name": "Carlos",
-            "phone": "5585992476020",
-            "bought": 650,
-            "notes": "Estudando"
-          }
-
-        ```
-      - Response Example
-
-         201 - Success
-         ```json
-          {
-             "id": 34,
-             "name": "Carlos",
-             "phone": "5585992476020",
-             "bought": 650,
-             "notes": "Estudando",
-             "created_at": "2020-11-16T18:23:54.381Z"
-          }
-         ```
-         
-         **See:** <a href="/">Error Docs</a>
-
- 
  - ### GET
     - Header Authorization
       ```Authorization: Bearer <token>```
@@ -107,6 +65,80 @@
        }
        ```
   
+
+ - ### POST
+     |Field|Description|Type|
+     |---|---|---|
+     |**name**|user name|string|
+     |**phone**|user phone|string|
+     |**bought**|how much user bought|number|
+     |**notes**|notes about user|string|
+
+     - Header Authorization
+
+       ```Authorization: Bearer <token>```
+
+       **token must be valid. See:**
+       <a href="/">How to get a token</a>
+     - Request Example
+
+        ```json
+          {
+            "name": "Carlos",
+            "phone": "5585992476020",
+            "bought": 650,
+            "notes": "Estudando"
+          }
+
+        ```
+      - Response Example
+
+         201 - Success
+         ```json
+          {
+             "id": 34,
+             "name": "Carlos",
+             "phone": "5585992476020",
+             "bought": 650,
+             "notes": "Estudando",
+             "created_at": "2020-11-16T18:23:54.381Z"
+          }
+         ```
+         
+         **See:** <a href="/">Error Docs</a>
+         
+- ### PUT
+ 
+    - Header Authorization
+      ```Authorization: Bearer <token>```
+
+      **token must be valid. See:**
+      <a href="/">How to get a token</a>
+      
+    - Request Example
+
+      ```json
+        {
+          "name": "José Silva",
+          "bought": 1000
+        }
+      ```
+
+    - Response Example
+
+       201 - Success: Returns the updated user.
+       ```json
+        {
+          "id": 36,
+          "name": "José Silva",
+          "phone": "5585992476020",
+          "bought": 1000,
+          "notes": "Estudando back-end",
+          "created_at": "2020-11-16T19:22:56.065Z"
+        }
+       ```
+
+       **See:** <a href="/">Error Docs</a>
 
 ## Admin Routes
 |Method|Path|Description|
