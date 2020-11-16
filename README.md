@@ -22,6 +22,50 @@
 |**PUT**|```/user<id>```|update an user by id|
 |**DELETE**|```/user<id>```|delete an user by id|
 
+ - ### GET
+    - Header Authorization
+      ```Authorization: Bearer <token>```
+
+      **token must be valid. See:**
+      <a href="/">How to get a token</a>
+      
+      
+    - Query Params
+    
+      |Param|Description|Required|Example|
+      |---|---|---|---|
+      |**page**|Defines the page|false|```/users?page=2```|
+      
+    - Response Example
+       
+       200 - Success
+       ```json
+       {
+         "data": 
+         [
+           {
+             "name": "Carlos Kauãn Moreira de Sousa",
+             "phone": "5585992476020",
+             "bought": 500,
+             "notes": "Estudando back-end",
+             "created_at": "2020-11-16T19:22:56.065Z",
+             "id": 3
+           },
+           {
+             "name": "Carlos Kauãn",
+             "phone": "5585992476020",
+             "bought": 500,
+             "notes": "Estudando back-end",
+             "created_at": "2020-11-16T19:22:56.065Z",
+             "id": 2
+           },
+
+         ],
+         "total": 1
+       }
+       ```
+ 
+
 ## Admin Routes
 |Method|Path|Description|
 |---|---|---|
