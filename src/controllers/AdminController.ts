@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import AdminUserType from 'src/models/Admin';
 
 export default {
-    async sign(request: Request, response: Response): Promise<Response> {
+    async create(request: Request, response: Response): Promise<Response> {
         const { name, email, password } = request.body;
         const data = {
             name,
