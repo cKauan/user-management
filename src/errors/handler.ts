@@ -5,6 +5,7 @@ interface ValidationErrors {
     [key: string]: string[];
 }
 const errorHandler: ErrorRequestHandler = (error, req, res, _) => {
+    _
     console.log(error);
     const [errorType] = error.toString().split(': ');
     if (error instanceof ValidationError) {
