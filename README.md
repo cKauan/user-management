@@ -22,6 +22,48 @@
 |**PUT**|```/user<id>```|update an user by id|
 |**DELETE**|```/user<id>```|delete an user by id|
 
+ - ### POST
+     |Field|Description|Type|
+     |---|---|---|
+     |**name**|user name|string|
+     |**phone**|user phone|string|
+     |**bought**|how much user bought|number|
+     |**notes**|notes about user|string|
+
+     - Header Authorization
+
+       ```Authorization: Bearer <token>```
+
+       **token must be valid. See:**
+       <a href="/">How to get a token</a>
+     - Request Example
+
+        ```json
+          {
+            "name": "Carlos",
+            "phone": "5585992476020",
+            "bought": 650,
+            "notes": "Estudando"
+          }
+
+        ```
+      - Response Example
+
+         201 - Success
+         ```json
+          {
+             "id": 34,
+             "name": "Carlos",
+             "phone": "5585992476020",
+             "bought": 650,
+             "notes": "Estudando",
+             "created_at": "2020-11-16T18:23:54.381Z"
+          }
+         ```
+         
+         **See:** <a href="/">Error Docs</a>
+
+ 
  - ### GET
     - Header Authorization
       ```Authorization: Bearer <token>```
@@ -64,7 +106,7 @@
          "total": 1
        }
        ```
- 
+  
 
 ## Admin Routes
 |Method|Path|Description|
@@ -96,11 +138,11 @@
         **See:** <a href="/">Error Docs</a>
         
   - ### POST
-      |Field|Description|
-      |---|---|
-      |**name**|admin name|
-      |**email**|admin email|
-      |**password**|admin password|
+      |Field|Description|type|
+      |---|---|---|
+      |**name**|admin name|string|
+      |**email**|admin email|string|
+      |**password**|admin password|string|
       
       - Header Authorization
       
