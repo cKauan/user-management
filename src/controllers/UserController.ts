@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import knex from '../database/connection';
+import UserView from '../views/user_app_view';
 import * as Yup from 'yup';
 
 export default {
@@ -31,7 +32,10 @@ export default {
         });
 
         await knex('users').insert(data);
-        return response.status(201).json(data);
+        const user = await knex('users').where({ ...data });
+        return response
+            .status(201)
+            .json(UserView.render(user[user.length - 1]));
     },
     async update(request: Request, response: Response): Promise<Response> {
         const { id } = request.params;
@@ -53,16 +57,31 @@ export default {
         });
         const existsData =
             Object.values(data).filter((item) => item != undefined).length > 0;
+
         if (existsData) {
             await knex('users').update(data).where({ id });
-            const updatedUser = await knex('users').where({ id });
-            return response.status(200).json(...updatedUser);
+            const updatedUser = await knex('users').where({ id }).first();
+            return updatedUser
+                ? response.status(200).json(UserView.render(updatedUser))
+                : response.status(404).json({
+                      message: 'Validation Fails',
+                      error: 'User Not Found',
+                  });
         }
-        return response.status(400).json({ error: 'Requisição inválida' });
+        return response
+            .status(400)
+            .json({ message: 'Validation Fails', error: 'Invalid Content' });
     },
     async delete(request: Request, response: Response): Promise<Response> {
         const { id } = request.params;
-        await knex('users').del().where({ id });
-        return response.status(200).json({ message: 'Deleted' });
+        const user = await knex('users').where({ id }).first();
+        if (user) {
+            await knex('users').where({ id }).del();
+            return response.status(200).json({ message: 'Deleted' });
+        }
+        return response.status(404).json({
+            message: 'Validation Fails',
+            error: 'User Not Found',
+        });
     },
 };
