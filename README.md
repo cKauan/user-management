@@ -28,7 +28,7 @@
 |**POST**|```/sign```|register a new admin|
 |**GET**|```/login```|login into admin account|
 
-  - ## GET
+  - ### GET
      - Header Authorization
      
        ```Authorization: Basic <basic64credentials>```
