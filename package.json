@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "yarn build && node dist/src/server.js",
-    "start:dev": "ts-node-dev src/server.ts",
+    "start:dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "style:check": "prettier --check \"src/**/*.ts\"",
