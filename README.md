@@ -64,7 +64,8 @@
          "total": 1
        }
        ```
-  
+   
+       **See:** <a href="/">Error Docs</a>
 
  - ### POST
      |Field|Description|Type|
@@ -138,6 +139,24 @@
         }
        ```
 
+       **See:** <a href="/">Error Docs</a>
+
+
+ - ### DELETE
+    - Header Authorization
+      ```Authorization: Bearer <token>```
+
+      **token must be valid. See:**
+      <a href="/">How to get a token</a>
+      
+    - Response Example
+       200 - Success
+       ```json
+        {
+           "message": "Deleted"
+        }
+       ```
+       
        **See:** <a href="/">Error Docs</a>
 
 ## Admin Routes
