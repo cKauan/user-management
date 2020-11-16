@@ -15,12 +15,12 @@
 
 
 ## Dashboard Routes
-|Method|Path|Description|
-|---|---|---|
-|**GET**|```/users```|get the users list ordered by id|
-|**POST**|```/users```|create a new user|
-|**PUT**|```/user<id>```|update an user by id|
-|**DELETE**|```/user<id>```|delete an user by id|
+|Method|Path|Description|Body|
+|---|---|---|---|
+|**GET**|```/users```|get the users list ordered by id|No Body|
+|**POST**|```/users```|create a new user|Json|
+|**PUT**|```/user<id>```|update an user by id|Json|
+|**DELETE**|```/user<id>```|delete an user by id|No Body|
 
  - ### GET
     - Header Authorization
@@ -160,10 +160,10 @@
        **See:** <a href="/">Error Docs</a>
 
 ## Admin Routes
-|Method|Path|Description|
-|---|---|---|
-|**POST**|```/sign```|register a new admin|
-|**GET**|```/login```|login into admin account|
+|Method|Path|Description|Body|
+|---|---|---|---|
+|**POST**|```/sign```|register a new admin|Json|
+|**GET**|```/login```|login into admin account|No Body|
 
   - ### GET
      - Header Authorization
