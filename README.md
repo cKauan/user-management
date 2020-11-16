@@ -28,6 +28,29 @@
 |**POST**|```/sign```|register a new admin|
 |**GET**|```/login```|login into admin account|
 
+  - ## GET
+     - Header Authorization
+     
+       ```Authorization: Basic <basic64credentials>```
+
+        - Encoded: ```Authorization: Basic Y2FybG9za2F1YW5AZ21haWwuY29tOmNhcmxvczEyMw==```
+
+        - Decoded: ```Authorization: Basic carloskauan@gmail.com:carlos123 ```
+     
+     - Response Example
+     
+        201 - Success
+        ```json
+         {
+            "id": "4802f5a1-7e53-4c4c-8f60-e1c7ec4c161b",
+            "name": "Carlos Kauãn",
+            "email": "carloskauan@gmail.com",
+            "token": "<token>"
+          }
+        ```
+        
+        **See:** <a href="/">Error Docs</a>
+        
   - ### POST
       |Field|Description|
       |---|---|
