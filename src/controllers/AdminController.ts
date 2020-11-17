@@ -47,16 +47,15 @@ export default {
         const [email, password] = Buffer.from(hash, 'base64')
             .toString()
             .split(':');
-        
+
         const user: AdminUserType = await knex('admin')
             .where({ email })
             .first();
-        
+
         const validateUserAndPassword = user
             ? bcrypt.compareSync(password, user.password)
             : false;
 
-        
         if (!validateUserAndPassword) {
             return response.status(401).json({
                 message: 'Authentication Fails',
