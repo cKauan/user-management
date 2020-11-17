@@ -12,6 +12,10 @@
   * [Tecnologies](#used-tecnologies)
   * [Requisites](#requisites)
   * [Installation](#installation)
+  * [Server](#run-server)
+  * [Styles](#styles)
+    * [Eslint](#eslint)
+    * [Prettier](#prettier)
 * [Documentation](#documentation)
 * [Contributing](#contributing)
 * [License](#license)
@@ -78,6 +82,10 @@ yarn knex seed:run
 # Npm
 npx knex seed:run
 
+```
+
+### Run Server
+```
 # Development server
 
 # Yarn
@@ -98,6 +106,42 @@ npm run build
 yarn start
 # Npm
 npm run start
+```
+### Styles
+
+#### Eslint
+```
+  # Find all nonstandard occurrences
+
+  # Yarn
+  yarn lint
+  # Npm
+  npm run lint
+  
+  # Fix all nonstandard occurrences
+  
+  # Yarn
+  yarn lint:fix
+  # Npm
+  npm run lint:fix
+
+```
+
+#### Prettier
+```
+  # Find all nonstandard occurrences
+
+  # Yarn
+  yarn style:check
+  # Npm
+  npm run style:check
+  
+  # Fix all nonstandard occurrences
+  
+  # Yarn
+  yarn style:fix
+  # Npm
+  npm run style:fix
 ```
 
 ## Documentation
