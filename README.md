@@ -9,7 +9,7 @@
 
 
 * [Start](#getting-started)
-  * [Tecnologies](#used-tecnologies)
+  * [Technologies](#used-technologies)
   * [Requisites](#requisites)
   * [Installation](#installation)
   * [Server](#run-server)
@@ -24,8 +24,8 @@
 <!-- GETTING STARTED -->
 ## Getting started
 
-### Used Tecnologies
-:pushpin: Most Used Tecnologies
+### Used Technologies
+:pushpin: Most Used Technologies
 * [Typescript](https://www.typescriptlang.org)
 * [Postgres](https://www.postgresql.org)
 * [KnexJS](http://knexjs.org/)
