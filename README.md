@@ -16,7 +16,10 @@
   * [Styles](#styles)
     * [Eslint](#eslint)
     * [Prettier](#prettier)
+  * [Environment Variables](#environment-variables)
 * [Documentation](#documentation)
+  * [Dashboard Routes](#dashboard-routes)
+  * [Admin Routes](#admin-routes)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -144,6 +147,21 @@ npm run start
   npm run style:fix
 ```
 
+## Environment Variables
+
+- Create a ```.env``` file
+
+  ```
+  JWT_SECRET=
+  ADMIN_EMAIL=
+  ```
+  
+  |Variable|Description|
+  |---|---|
+  |**JWT_SECRET**|A identifier for your jwt token|
+  |**ADMIN_EMAIL**|The email you need to create other admin accounts|
+ 
+ 
 ## Documentation
 
 ### Dashboard Routes
@@ -356,7 +374,33 @@ npm run start
           ```
           **See:** <a href="/">Error Docs</a>
           
+## Error Docs
+### Common errors
+|Code|Description|Action|
+|---|---|---|
+|**400**|Validation Fails|Review json body|
+|**401**|Authentication Fails|Review your credentials|
+|**500**|Internal Server Error|Review server connection and database|
 
+## FAQ
+#### How do I get a token?
+  - There're 2 ways to get a token
+    * Creating an admin account
+    * Logging into an admin account
+    
+    **See:** [Admin Routes](#admin-routes)
+    
+#### How get a valid superuser token?
+  - When You run the seeds, a default superuser is created
+  - You need login into that account and get it token
+  - The default account is
+  
+    ```
+    email: carloskauanmoreiradesousa@gmail.com
+    password: carlos123
+    ```
+  - To change it by default, put ```ADMIN_EMAIL``` into .env file and change ``002_admin.ts`` file.
+  - The admin seed password must be encrypted with bcrypt 10 rounds
 <!-- CONTRIBUTING -->
 ## Contributing
 
