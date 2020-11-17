@@ -8,7 +8,7 @@
 ## :paperclip: Sumário
 
 
-- [:paperclip: Sumário](#paperclip-sumário)
+- [Sumário](#paperclip-sumário)
 - [Getting started](#getting-started)
   - [Used Technologies](#used-technologies)
   - [Requisites](#requisites)
@@ -183,7 +183,7 @@ npm run start
       ```Authorization: Bearer <token>```
 
       **token must be valid. See:**
-      <a href="/">How to get a token</a>
+      <a href="#faq">How to get a token</a>
       
       
     - Query Params
@@ -221,7 +221,7 @@ npm run start
        }
        ```
    
-       **See:** <a href="/">Error Docs</a>
+       **See:** <a href="#error-docs">Error Docs</a>
 
  - #### POST
      |Field|Description|Type|
@@ -236,7 +236,7 @@ npm run start
        ```Authorization: Bearer <token>```
 
        **token must be valid. See:**
-       <a href="/">How to get a token</a>
+       <a href="#faq">How to get a token</a>
      - Request Example
 
         ```json
@@ -262,7 +262,7 @@ npm run start
           }
          ```
          
-         **See:** <a href="/">Error Docs</a>
+         **See:** <a href="#error-docs">Error Docs</a>
          
 - #### PUT
  
@@ -270,7 +270,7 @@ npm run start
       ```Authorization: Bearer <token>```
 
       **token must be valid. See:**
-      <a href="/">How to get a token</a>
+      <a href="#faq">How to get a token</a>
       
     - Request Example
 
@@ -295,7 +295,7 @@ npm run start
         }
        ```
 
-       **See:** <a href="/">Error Docs</a>
+       **See:** <a href="#error-docs">Error Docs</a>
 
 
  - #### DELETE
@@ -303,7 +303,7 @@ npm run start
       ```Authorization: Bearer <token>```
 
       **token must be valid. See:**
-      <a href="/">How to get a token</a>
+      <a href="#faq">How to get a token</a>
       
     - Response Example
        200 - Success
@@ -313,7 +313,7 @@ npm run start
         }
        ```
        
-       **See:** <a href="/">Error Docs</a>
+       **See:** <a href="#error-docs">Error Docs</a>
 
 ### Admin Routes
 |Method|Path|Description|Body|
@@ -342,7 +342,7 @@ npm run start
           }
         ```
         
-        **See:** <a href="/">Error Docs</a>
+        **See:** <a href="#error-docs">Error Docs</a>
         
   - #### POST
       |Field|Description|type|
@@ -356,7 +356,7 @@ npm run start
         ```Authorization: Bearer <token>```
         
         **token must be a valid superuser. See:**
-        <a href="/">How to get a admin token</a>
+        <a href="#faq">How to get a admin token</a>
       - Request Example
       
          ```json
@@ -378,7 +378,7 @@ npm run start
               "token": "<token>"
             }
           ```
-          **See:** <a href="/">Error Docs</a>
+          **See:** <a href="#error-docs">Error Docs</a>
           
 ## Error Docs
 ### Common errors
