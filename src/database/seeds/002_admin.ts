@@ -9,7 +9,7 @@ export async function seed(knex: Knex): Promise<void> {
         {
             name: 'Carlos Kauãn',
             email: 'carloskauanmoreiradesousa@gmail.com',
-            password: 'carlos123',
+            password: '$2b$10$joGDZSfIixaGKxmzjgIVZOACTzjyzjccmSQzNsl89hXebHVnEdHXK',
         },
     ]);
 }
